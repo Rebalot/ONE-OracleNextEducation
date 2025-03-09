@@ -18,6 +18,11 @@ const agregarAmigo = () => {
 const sortearAmigo = () => {
     const resultado = document.getElementById('resultado');
     const listaAmigos = document.getElementById('listaAmigos');
+    console.log(amigos);
+    if(amigos.length < 2) {
+        alert('Debes ingresar al menos dos amigos');
+        return;
+    }
     const amigoAleatorio = amigos[Math.floor(Math.random() * amigos.length)];
     resultado.innerHTML = `El amigo secreto de hoy es: ${amigoAleatorio}`;
     amigos = [];
